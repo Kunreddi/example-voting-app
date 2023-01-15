@@ -17,3 +17,11 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureSubscription: 'Azure subscription 1(2)(5a142c43-324b-4bfa-9642-608c15cc0954)'
+    azureContainerRegistry: '{"loginServer":"kubeacrcb.azurecr.io", "id" : "/subscriptions/5a142c43-324b-4bfa-9642-608c15cc0954/resourceGroups/kubepoc/providers/Microsoft.ContainerRegistry/registries/kubeacrcb"}'
+    dockerComposeFile: '**/docker-compose.yml'
+    action: 'Run a Docker Compose command'
+    dockerComposeCommand: 'docker compose up'
