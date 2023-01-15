@@ -24,4 +24,4 @@ steps:
     azureContainerRegistry: '{"loginServer":"kubeacrcb.azurecr.io", "id" : "/subscriptions/5a142c43-324b-4bfa-9642-608c15cc0954/resourceGroups/kubepoc/providers/Microsoft.ContainerRegistry/registries/kubeacrcb"}'
     dockerComposeFile: '**/docker-compose.yml'
     action: 'Run a Docker Compose command'
-    dockerComposeCommand: 'docker compose up'
+    dockerComposeCommand: 'compose up'
